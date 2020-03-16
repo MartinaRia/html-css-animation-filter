@@ -110,21 +110,19 @@
 
 .ex-11-icon {
     font-size: 60px;
-    transition: transform 1.5s linear;
 }
 .ex-11-icon:hover{
-  transform: rotate(270deg);
   animation-name: goback;
-  animation-delay: 1.5s;
-  animation-duration: 0.2s;
+  /* animation-delay: 1.5s; */
+  animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-fill-mode: none;
   animation-iteration-count: 1;
 }
 @keyframes goback {
-  from {transform:rotate(270deg)}
-  to {transform: rotate(0deg);}
-
+  0% {transform:rotate(0deg)}
+  80% {transform: rotate(270deg);}
+  100% {transform: rotate(0deg);}
 }
 
 
@@ -157,8 +155,72 @@
     width: 60px;
     height: 20px;
 }
-/* MARTINA ANIMATION ---------------------------------- */
-
-.ex-1-square{
-
+.ex-12-button:hover .ex-12-top-white{
+  animation-name: go-12-top;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: none;
 }
+@keyframes go-12-top {
+  0% {left:10%}
+  50% {left:60%}
+  100% {left:10%}
+}
+.ex-12-button:hover .ex-12-bottom-white{
+  animation-name: back-12-bottom;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+}
+@keyframes back-12-bottom {
+  0% {right:20%}
+  50% {right:70%}
+  100% {right:20%}
+}
+
+.ex-13-button:hover .ex-13-top-white{
+  animation-name: go-13-top;
+  animation-duration: 2.5s;
+  animation-delay: 0s;
+  animation-iteration-count:1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+}
+@keyframes go-13-top {
+  10% {left:50%}
+  20% {left:90%; top:-10px}
+  30% {left:90%; top:20px}
+  40% {left:90%; top:50px}
+  50% {left:50%; top:50px}
+  60% {left:30%; top:50px}
+  70% {left:-10%; top:50px}
+  80% {left:-10%; top:20px}
+  90% {left:-10%; top:-10px}
+}
+
+  .ex-13-button:hover .ex-13-bottom-white{
+    animation-name: go-13-bottom;
+    animation-duration: 2.5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-fill-mode: none;
+  }
+  @keyframes go-13-bottom {
+    10% {right: 60%}
+    20% {right: 80%; bottom:-10px}
+    30% {right: 80%; bottom:20px}
+    40% {right: 80%; bottom:50px}
+    50% {right: 60%; bottom:50px}
+    60% {right: 30%; bottom:50px}
+    70% {right: -10%; bottom:50px}
+    80% {right: -10%; bottom:20px}
+    90% {right: -10%; bottom:-10px}
